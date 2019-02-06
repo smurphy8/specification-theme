@@ -70,7 +70,7 @@
 .org-org-checkbox-statistics-done { /* org-checkbox-statistics-done */ color: #228b22; font-weight: bold; }
 .org-org-checkbox-statistics-todo { /* org-checkbox-statistics-todo */ color: #ff0000; font-weight: bold; }
 .org-org-clock-overlay { /* org-clock-overlay */ background-color: #ffff00; }
-.org-org-code { /* org-code */ color: #7f7f7f; }
+.org-org-code { /* org-code */ color: #696966; }
 .org-org-column { /* org-column */ background-color: #e5e5e5; }
 .org-org-column-title { /* org-column-title */ background-color: #e5e5e5; font-weight: bold; text-decoration: underline; }
 .org-org-date { /* org-date */ color: #a020f0; text-decoration: underline; }
