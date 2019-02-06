@@ -1,0 +1,55 @@
+#+SETUPFILE: ./specification-dev.setup
+
+* An initial proposal
+* Extra stuff
+* Some Cod
+** An outline of the types
+#+BEGIN_SRC haskell
+
+-- Every SWD will have a set of lanes
+type Lanes = [Lane]
+
+-- A lane is a number and a status
+data Lane = { laneNumber::Int, laneStatus::LaneStatus}
+
+-- Every Lane Has a status
+data LaneStatus =
+   Available
+ | WaitingToStart
+ | Pumping
+ | Disabled Text
+#+END_SRC
+
+
+** API
+
+
+#+BEGIN_SRC haskell
+
+-- <ip>:<port>/kiosk/lanes
+getLanes :: Handler Lanes
+-- GOOD RESPONSE
+-- >>> [ { 'lane' = 1, 'status' = "Available" }
+--     , { 'lane' = 2, 'status' = "WaitingToStart" }
+--     , { 'lane' = 2, 'status' = {'disabled' = "Valve in shop"} }]
+-- BAD RESPONSE
+-- Standard 400,500
+
+-- <ip>:<port>/kiosk/lane/<lane-number>
+getLane :: Handler Lane 
+-- GOOD RESPONSE
+-- >>> { 'lane' = 1, 'status' = "Available" }
+-- BAD RESPONSE
+-- Standard 400,500
+
+
+-- Put lane sets a lane as WaitingToStart
+-- <ip>:<port>/kiosk/lane/3
+putLaneWaitingToStart :: Handler ()
+-- GOOD RESPONSE
+-- ()
+-- BAD RESPONSE
+-- Lane State Error 5xx 
+-- Standard 400
+#+END_SRC
+
