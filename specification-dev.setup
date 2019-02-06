@@ -4,5 +4,5 @@
 # Files are relative to path 
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/bigblow.css"/>
-# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/hideshow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/myblow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/hideshow.css"/>
